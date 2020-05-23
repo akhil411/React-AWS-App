@@ -3,3 +3,8 @@
     margin: auto;
     padding: 50px 25px 50px 25px;
 }
+
+.form-error {
+    color: red;
+    font-style: italic;
+}

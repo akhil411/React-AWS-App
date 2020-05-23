@@ -20,11 +20,14 @@ module.exports = {
         historyApiFallback: true,
         disableHostCheck: true,
         headers: { "Access-Control-Allow-Origin": "*" },
-        https: false
+        https: false,
+        proxy: {
+            '/api': 'http://localhost:5000'
+        }
     },
     plugins: [
         new webpack.DefinePlugin({
-            "process.env.API_URL": JSON.stringify("http://localhost:3001")
+            "process.env.API_URL": JSON.stringify("http://localhost:5000/")
         }),
         new HtmlWebpackPlugin({
             template: "src/index.html",
